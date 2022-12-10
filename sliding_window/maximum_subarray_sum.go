@@ -23,7 +23,7 @@ Window position                Max
 
 *
 */
-func maxSlidingWindow(nums []int, k int) []int {
+func MaxSlidingWindow(nums []int, k int) []int {
 	// it will hold the index's of the maximum element in the current sliding window
 	deQue := list.New()
 	result := []int{}
@@ -52,6 +52,6 @@ func maxSlidingWindow(nums []int, k int) []int {
 func main() {
 	var nums []int = []int{1, 3, -1, -3, 5, 3, 6, 7}
 	k := 3
-	fmt.Println(maxSlidingWindow(nums, k))
-	fmt.Println(maxSlidingWindow([]int{4, 3, 11}, 3))
+	fmt.Println(MaxSlidingWindow(nums, k))
+	fmt.Println(MaxSlidingWindow([]int{4, 3, 11}, 3))
 }
