@@ -11,7 +11,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "subsequences/combination_sum_II.go"
+            "program": "recursion/N-Queens.go"
         }
     ]
 }

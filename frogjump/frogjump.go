@@ -34,6 +34,33 @@ func minimumEnergyWithTabular(H []int) int {
 	}
 	return DP[len(H)-1]
 }
+
+func romanToInt(s string) int {
+	r := map[string]int{
+		"I": 1,
+		"V": 5,
+		"X": 10,
+		"L": 50,
+		"C": 100,
+		"D": 500,
+		"M": 1000,
+	}
+
+	value := 0
+	prevValue := 0
+	for _, v := range s {
+		romanValue := r[string(v)]
+		if prevValue < romanValue {
+			value += romanValue - (prevValue * 2)
+		} else {
+			value += romanValue
+		}
+		prevValue = romanValue
+	}
+
+	return value
+}
+
 func main() {
 
 	H := []int{10, 20, 30, 10}
